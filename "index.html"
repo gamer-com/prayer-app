@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بر الوالدين الرابع</title>
+    <style>
+        body { font-family: Arial; background: linear-gradient(135deg, #E8F5E8, #fff); margin: 0; padding: 20px; }
+        .header { background: #2D5729; color: white; text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; margin: 10px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .time { font-size: 24px; font-weight: bold; color: #2D5729; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🕌 بر الوالدين الرابع</h1>
+        <p>تطبيق ديني شامل</p>
+    </div>
+    
+    <div class="card">
+        <h2>⏰ الوقت الحالي</h2>
+        <div class="time" id="time"></div>
+    </div>
+    
+    <div class="card">
+        <h2>🕌 مواقيت الصلاة</h2>
+        <p><strong>الفجر:</strong> 05:30</p>
+        <p><strong>الظهر:</strong> 12:15</p>
+        <p><strong>العصر:</strong> 15:45</p>
+        <p><strong>المغرب:</strong> 18:20</p>
+        <p><strong>العشاء:</strong> 19:45</p>
+    </div>
+    
+    <div class="card">
+        <h2>📿 أذكار الصباح</h2>
+        <p><strong>آية الكرسي:</strong> مرة واحدة</p>
+        <p><strong>سبحان الله وبحمده:</strong> 100 مرة</p>
+    </div>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ar-SA');
+            document.getElementById('time').textContent = timeString;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
